@@ -1,0 +1,22 @@
+## Heroku notes
+1. install heroku cli
+2. enter cmd heroku login inorder to login to your heroku account 
+
+## git notes
+1. install git version control system from git-scm.com 
+2. git is used to track files by creating savepoints of prev versions of app
+3. to start git in app use 'git init' cmd that will create .git folder (inorder change visibility of .git foler follow "File->preferences->settings
+     scroll down and navigate to file:exclude section")
+4. use 'git status' cmd to see untracked files list
+5. to stop git from tracking certain files like node_modules create a folder and name it ".gitignore" and then simply type folder name in that
+   file like node_modules/
+6. use 'git add .' cmd to add all untracked files to staged area and then use 'git commit -m "[description]"' cmd commit changes made and create a savepoints
+
+## ssh key setup inorder deploy project to github and heroku for windows
+1. open git bash
+   follow these cmds:-
+   1. ls -a -l ~/.ssh  (check if ssh folder exists in user folder "-a"- to show hidden folder "-l"- list folder in proper structure "~/.ssh - /c/Users/Lenovo/.ssh check this folder exists or not)
+   2. ssh-keygen -t rsa -b 4096 -C "pandeyaayush81@gmail.com"  (generate rsa ssh key)
+   3.  eval $(ssh-agent -s)
+   4.  ssh-add ~/.ssh/id_rsa
+done

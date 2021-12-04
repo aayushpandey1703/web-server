@@ -1,0 +1,9 @@
+header{
+    background-color: grey;
+    margin:0;
+}
+header li{
+    text-decoration: nono;
+    list-style: none;
+    float: right;
+}
