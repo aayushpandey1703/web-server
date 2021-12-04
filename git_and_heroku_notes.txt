@@ -12,6 +12,15 @@
    file like node_modules/
 6. use 'git add .' cmd to add all untracked files to staged area and then use 'git commit -m "[description]"' cmd commit changes made and create a savepoints
 
+## github deployment from git
+0. open git bash and navigate to project directory like 'F:\Node.js projects\web-server'
+1. test connection to github using 'ssh -T git@github.com' cmd
+2. create a new repo at github
+3. git remote add origin git@github.com:aayushpandey1703/test.git
+4. git branch -M main
+5. git push -u origin main
+6. after that any changes to be updated at github just use 'git push' cmd
+
 ## ssh key setup inorder deploy project to github and heroku for windows
 1. open git bash
    follow these cmds:-
