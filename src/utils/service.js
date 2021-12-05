@@ -10,7 +10,7 @@ const temp = (address="new york", callback) => {
         else {
             const url = "http://api.weatherstack.com/current?access_key=21fefb078b4c1fc5e71463cb9e5d3f57&query=" + data.lati + "," + data.long + ""
 
-            request({ url }, (error, response) => {
+            request({ url,json:true }, (error, response) => {
                 if (error) {
                     console.log(chalk.bgRed('Something went wrong'))
                     callback({error:error},undefined)
@@ -21,12 +21,14 @@ const temp = (address="new york", callback) => {
                     
                 }
                 else {
-                    const data = JSON.parse(response.body)
+                    const data = response.body
                     callback(undefined,{
                         temp: data.current.temperature,
                         feel_like: data.current.feelslike,
                         description: data.current.weather_descriptions[0],
-                        location:address
+                        location:address,
+                        time:data.current.observation_time,
+                        image:data.current.weather_icons[0]
                     })
                 }
             })
@@ -62,5 +64,4 @@ const lat = (address, callback) => {
     }, 2000)
     console.log("Finding coordinates...")
 }
-
-module.exports = temp   
+ module.exports=temp

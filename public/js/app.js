@@ -10,7 +10,9 @@ const weatherForm = document.querySelector("form");
 const search = document.querySelector("input");
 const msg1=document.querySelector('#msg-1')
 const msg2=document.querySelector('#msg-2')
+const msg3=document.querySelector('#msg-3')
 const msg=document.querySelector('.message')
+const image=document.querySelector('img')
 
 
 weatherForm.addEventListener("submit", (e) => {
@@ -29,6 +31,8 @@ weatherForm.addEventListener("submit", (e) => {
     console.log("testing..");
     msg1.innerHTML="Loading..."
     msg2.innerHTML=""
+    msg3.innerHTML=""
+
     fetch("/weather/weather2?address=" + location).then((response) => {             // send request to api endpoint weather/weather2
         response.json().then((data) => {
             if(data.error)
@@ -38,11 +42,15 @@ weatherForm.addEventListener("submit", (e) => {
                 msg.style.width="50%"
                 msg1.innerHTML=data.error 
                 msg2.innerHTML=""
+                msg3.innerHTML=""
             }
             else{
             msg.style.width="50%"
             msg1.innerHTML='temperature is '+data.temp 
-            msg2.innerHTML='weather is '+data.description     
+            msg2.innerHTML='weather is '+data.description   
+            msg3.innerHTML='Recorded time: '+data.time  
+            image.src=data.image
+            
             }
                     
         });

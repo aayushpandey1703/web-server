@@ -11,6 +11,7 @@
 5. to stop git from tracking certain files like node_modules create a folder and name it ".gitignore" and then simply type folder name in that
    file like node_modules/
 6. use 'git add .' cmd to add all untracked files to staged area and then use 'git commit -m "[description]"' cmd commit changes made and create a savepoints
+7. to revert to previous version of project using git follow this link: https://www.youtube.com/watch?v=dEPwr7a6Pw0
 
 ## github deployment from git
 0. open git bash and navigate to project directory like 'F:\Node.js projects\web-server'
