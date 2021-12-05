@@ -35,6 +35,7 @@ weatherForm.addEventListener("submit", (e) => {
                 msg.style.borderRadius='10px'
                 msg.style.width="50%"
                 msg1.innerHTML=data.error 
+                msg2.innerHTML=""
             }
             else{
             msg.style.width="50%"
