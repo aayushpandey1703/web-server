@@ -31,4 +31,9 @@
    2. ssh-keygen -t rsa -b 4096 -C "pandeyaayush81@gmail.com"  (generate rsa ssh key)
    3.  eval $(ssh-agent -s)
    4.  ssh-add ~/.ssh/id_rsa
-done
+
+## heroku deployment
+1. use "heroku create [app name]" cmd
+2. change the key-val pair in script key in package.json file to "start":"node src/app.js"  [now u can run ur app locally using cmd "npm run start"]
+3. change the port value at app.listen in app.js file and also at public/js/app.js file change the localhost url to /weather so that heroku can use heroku url rather than localhost url
+4. 

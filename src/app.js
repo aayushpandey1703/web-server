@@ -11,7 +11,9 @@ const path=require('path')
 const hbs=require('hbs')
 const temp = require("./utils/service")
 
+
 const app=express()
+const port=process.env.PORT || 3000                             //for heroku deployment we get heroku alloted port number from process.env.port else we use static port 3000 for local deployment
 
 const PublicDirectoryPath=path.join(__dirname,"../public")     //locate to directory of style.css,img to use them (__dirname=/user/node.js projects/web-server/src)
 const viewsPath=path.join(__dirname,"../templates/views")                        //change views direcotry name to custom name ->1
@@ -65,6 +67,6 @@ app.get('*',(req,res)=>{
     res.render("error")
 })
 
-app.listen(3000,()=>{
-    console.log("server is up on port 3000")
+app.listen(port,()=>{
+    console.log("server is up on port",port)
 })
