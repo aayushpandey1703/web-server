@@ -1,8 +1,8 @@
-fetch("http://puzzle.mead.io/puzzle").then((response) => {
-  response.json().then((data) => {
-    console.log(data);
-  });
-});
+// fetch("http://puzzle.mead.io/puzzle").then((response) => {
+//   response.json().then((data) => {
+//     console.log(data);
+//   });
+// });
 
 //challenge
 
@@ -27,6 +27,8 @@ weatherForm.addEventListener("submit", (e) => {
   
   else {
     console.log("testing..");
+    msg1.innerHTML="Loading..."
+    msg2.innerHTML=""
     fetch("/weather/weather2?address=" + location).then((response) => {             // send request to api endpoint weather/weather2
         response.json().then((data) => {
             if(data.error)

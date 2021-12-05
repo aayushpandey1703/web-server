@@ -37,11 +37,10 @@ const temp = (address="new york", callback) => {
 }
 
 
-const lat = (address, callback) => {
-    setTimeout(() => {
+const lat = (address, callback) => { 
+    setTimeout(() => {                       
         url = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + address + ".json?access_token=pk.eyJ1IjoiYWxlcm9uIiwiYSI6ImNrbGI0cGw0YzByd2syb3M4bThmMHJ0NTIifQ.gki2IB19zQhALXe76z4JfA"
         request({ url: url, json: true }, (error, response) => {
-            console.log(response)
             if (error) {
                 callback({error:"no internet"}, undefined)
 
