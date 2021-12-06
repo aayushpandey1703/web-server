@@ -32,6 +32,7 @@ weatherForm.addEventListener("submit", (e) => {
     msg1.innerHTML="Loading..."
     msg2.innerHTML=""
     msg3.innerHTML=""
+    image.src=""
 
     fetch("/weather/weather2?address=" + location).then((response) => {             // send request to api endpoint weather/weather2
         response.json().then((data) => {
@@ -43,6 +44,7 @@ weatherForm.addEventListener("submit", (e) => {
                 msg1.innerHTML=data.error 
                 msg2.innerHTML=""
                 msg3.innerHTML=""
+                image.src=""
             }
             else{
             msg.style.width="50%"
