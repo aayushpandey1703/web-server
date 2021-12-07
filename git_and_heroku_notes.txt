@@ -14,6 +14,8 @@
 7. to revert to previous version of project using git follow this link: https://www.youtube.com/watch?v=dEPwr7a6Pw0
 8. 'git log --oneline' to list out project versions
 9. use 'git reset --hard <version number>' cmd to switch head to that project version
+10. you could use 'git push -u main' cmd to get origin remote at current brance so that u could use 'git push' cmd instead of 'git push origin main' cmd 
+    to push code to github
 
 ## github deployment from git
 0. open git bash and navigate to project directory like 'F:\Node.js projects\web-server'
