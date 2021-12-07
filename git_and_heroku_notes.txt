@@ -13,6 +13,7 @@
 6. use 'git add .' cmd to add all untracked files to staged area and then use 'git commit -m "[description]"' cmd commit changes made and create a savepoints
 7. to revert to previous version of project using git follow this link: https://www.youtube.com/watch?v=dEPwr7a6Pw0
 8. 'git log --oneline' to list out project versions
+9. use 'git reset --hard <version number>' cmd to switch head to that project version
 
 ## github deployment from git
 0. open git bash and navigate to project directory like 'F:\Node.js projects\web-server'
