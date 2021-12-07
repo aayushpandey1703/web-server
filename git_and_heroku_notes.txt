@@ -42,3 +42,6 @@
 
 whenever you want to deploy any project to heroku first push the code to github.com and after that follow above steps
 to deploy your app
+
+## mongodb notes
+1. Start mongodb server using cmd 'D:\mongodb\bin\mongod.exe --dbpath=D:\mongodb-data' at terminal 
