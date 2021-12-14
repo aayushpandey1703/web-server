@@ -56,7 +56,8 @@ weatherForm.addEventListener("submit", (e) => {
             }
                     
         });
-      }
-    );
+      }).catch((error)=>{
+      console.log('Error occured while fetching',error)
+    })
   }
 });
