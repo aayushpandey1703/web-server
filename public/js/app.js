@@ -12,7 +12,7 @@ const msg1=document.querySelector('#msg-1')
 const msg2=document.querySelector('#msg-2')
 const msg3=document.querySelector('#msg-3')
 const msg=document.querySelector('.message')
-const image=document.querySelector('img')
+const image=document.getElementById('logo2')
 
 
 weatherForm.addEventListener("submit", (e) => {
